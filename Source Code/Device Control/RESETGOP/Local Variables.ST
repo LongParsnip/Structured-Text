@@ -1,0 +1,8 @@
+﻿VAR_INPUT
+    IN: BOOL;
+    IN_GOP: INT;
+END_VAR
+
+VAR_OUTPUT
+    OUT_GOP: INT;
+END_VAR
