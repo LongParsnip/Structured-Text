@@ -11,11 +11,11 @@ I publish my works incase someone finds them useful, that is all.
 
 
 
-## User Defined Functions List:
+# User Defined Functions List:
 
-# Device Control:
+## Device Control:
 * DEVCTL:     Device control block for digital devices, includes state tracking, override interlocks, permissive interlocks and configurable alarm conditions.
 * RESETGOP:   Required component of the DEVCTL block, a bit of a nasty work around until I find a better solution.
 
-# Logic:
+## Logic:
 * TON_Pausable:   A pausable TON function, adds an additional input so that you may suspend the timing operation without resetting it.
