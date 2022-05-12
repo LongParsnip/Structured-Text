@@ -14,6 +14,7 @@ I publish my works incase someone finds them useful, that is all.
 # User Defined Functions List:
 
 ## Auxiliary:
+* HSCENC:     (LADDER) High speed counter for a pulse input (Micro850), can be used in conjunction with a SCP_ST block to create a RPM indicator from a pulse input.
 * SCP_ST:     Scale with parameters. Takes an input and scales it with user configured params.
 
 ## Device Control:
@@ -21,6 +22,8 @@ I publish my works incase someone finds them useful, that is all.
 * RESETGOP:   Required component of the DEVCTL block, a bit of a nasty work around until I find a better solution.
 
 ## Logic:
+* GTA:            Greater than block with deadband.
+* LTA:            Less than block with deadband.
 * TON_Pausable:   A pausable TON function, adds an additional input so that you may suspend the timing operation without resetting it.
 * TRIG:           A trigger block with TON/TOF functionality in a single function.
 
