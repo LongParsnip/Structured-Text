@@ -22,4 +22,5 @@ I publish my works incase someone finds them useful, that is all.
 * TRIG:           A trigger block with TON/TOF functionality in a single function.
 
 ## Utility:
+* DIDOREF:      Reference block for a DI/DO tag, usefull mostly for allowing you to indicate the IO clearly and invert if required.
 * FLASHER:      Generates an ON/OFF output with configurable time when the Input is On.
