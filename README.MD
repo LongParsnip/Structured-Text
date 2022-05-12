@@ -13,6 +13,9 @@ I publish my works incase someone finds them useful, that is all.
 
 # User Defined Functions List:
 
+## Auxiliary:
+* SCP_ST:     Scale with parameters. Takes an input and scales it with user configured params.
+
 ## Device Control:
 * DEVCTL:     Device control block for digital devices, includes state tracking, override interlocks, permissive interlocks and configurable alarm conditions.
 * RESETGOP:   Required component of the DEVCTL block, a bit of a nasty work around until I find a better solution.
