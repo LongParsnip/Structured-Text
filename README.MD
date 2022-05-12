@@ -20,3 +20,6 @@ I publish my works incase someone finds them useful, that is all.
 ## Logic:
 * TON_Pausable:   A pausable TON function, adds an additional input so that you may suspend the timing operation without resetting it.
 * TRIG:           A trigger block with TON/TOF functionality in a single function.
+
+## Utility:
+* FLASHER:      Generates an ON/OFF output with configurable time when the Input is On.
