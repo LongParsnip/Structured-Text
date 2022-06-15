@@ -34,7 +34,12 @@ I publish my works incase someone finds them useful, that is all.
 
 # Project Builds:
 I have also build some project files for more complex reusable systems.
-These can be found in the
+These can be found in the builds directory.
 
-* Annunciator:  A 19 output + 1 siren annunciator panel program for a Micro850 PLC (28DI/20DO).
+## Annunciator (FBD & ST):
+A 19 output + 1 siren annunciator panel program for a Micro850 PLC (28DI/20DO).
+* Acknowledge Button Input.
+* Audible Siren Output.
+* Synchronised Flashing Operator.
+* Exandable, just add more IO and copy and paste the function blocks.
 
