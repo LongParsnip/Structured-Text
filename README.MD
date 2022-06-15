@@ -40,6 +40,6 @@ These can be found in the builds directory.
 A 19 output + 1 siren annunciator panel program for a Micro850 PLC (28DI/20DO).
 * Acknowledge Button Input.
 * Audible Siren Output.
-* Synchronised Flashing Operator.
+* Synchronised Flashing Operation.
 * Exandable, just add more IO and copy and paste the function blocks.
 
