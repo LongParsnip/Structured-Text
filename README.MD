@@ -30,3 +30,10 @@ I publish my works incase someone finds them useful, that is all.
 ## Utility:
 * DIDOREF:      Reference block for a DI/DO tag, usefull mostly for allowing you to indicate the IO clearly and invert if required.
 * FLASHER:      Generates an ON/OFF output with configurable time when the Input is On.
+
+
+# Project Builds:
+I have also build some project files for more complex reusable systems.
+
+* Annunciator:  A 19 output + 1 siren annunciator panel program for a Micro850 PLC (28DI/20DO).
+
