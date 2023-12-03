@@ -20,10 +20,13 @@ VAR_OUTPUT
     UNCMD_FL: BOOL;		//Uncommanded Change Alarm
     S0_RDY: BOOL;		//State0 Ready (no interlocks present)
     S1_RDY: BOOL;		//State1 Ready (no interlocks present)
-    GOP_NOCMD: BOOL;	//Triggers external block to set the GOP
+    GOP_LOOP: INT;		//Allows GOP reset under interlock condition (Must be connected to the same var as the GOP input)
+    ERROR: BOOL;		//Indicates if an error is present
+    ERROR_DESC: STRING;		//Error description
  END_VAR
 	
-VAR	
+VAR
+	GOP_NOCMD: BOOL;	//Triggers internal logic for resetting the GOP input on interlock condition.
 	LastOP: INT;		//Previous Value Of OP
     GOP_TEMP: INT;		//Temporary GOP Value
     GOP_Last: INT;		//Value of GOP during the last execution cycle
