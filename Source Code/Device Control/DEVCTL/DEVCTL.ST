@@ -1,9 +1,9 @@
-﻿//DEVCTL - Device Control Block
+//DEVCTL - Device Control Block
 //Functionally similar to the Honeywell Control Execution Environment (CEE) DEVCTL block.
 //----------------------------------------------------------------------------------------------
-//IMPORTANT:	This block must have a 'RESETGOP' block connected to the output parameter GOP_NOCMD.
+//IMPORTANT:	This block must have the same variable connected to GOP and GOP_LOOP, if this is not done the block will throw an initialisation error and disable itself.
 //				This ensures that after an interlock has been triggered the GOP (Generic Output), is reset back to a no command.
-//				The block cannot change the value of an input variable so it has to be changed externally.
+//				The block cannot change the value of an input variable so it has to be changed as an output var.
 //
 //
 //Usage:
@@ -26,6 +26,11 @@ GOP_5(CLK := GOP_EQ5);
 //**********************
 CMDDIS_TON0(CMDDIS_IN0, CMDDIS_TM0);
 CMDDIS_TON1(CMDDIS_IN1, CMDDIS_TM1);
+
+
+//Jump to block initiasation.
+IF INIT_PASSED THEN
+
 
 
 
@@ -133,7 +138,32 @@ CMDDIS_TON1(CMDDIS_IN1, CMDDIS_TM1);
 		END_IF;
 	END_IF;
 	IF PV = OP THEN		UNCMD_FL := FALSE;		END_IF;
+	
+	
+	
+	//Reset GOP - GOP and GOP_LOOP must always be connected to the same variable.
+	IF GOP_NOCMD THEN
+		GOP_LOOP := 0;
+	ELSE
+		GOP_LOOP := GOP;
+	END_IF;
 
+	
+ELSE
+	
+	//Block initialisation.	
+	GOP_LOOP := 99;					//Write to the GOP_LOOP output and check for a change on the Input.
+	IF GOP = 99 THEN
+		INIT_PASSED := TRUE;
+		ERROR := FALSE;
+		ERROR_DESC := '';
+		GOP_LOOP := 0;
+	ELSE
+		ERROR := TRUE;
+		ERROR_DESC := 'GOP not connected to GOP_LOOP';
+	END_IF;
+	
+END_IF;
 
 LastPV := PV;
 LastOP := OP;
