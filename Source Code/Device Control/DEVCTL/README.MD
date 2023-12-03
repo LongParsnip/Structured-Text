@@ -1,5 +1,7 @@
 # IMPORTANT!
-This block must have a 'RESETGOP' connected to the reset GOP output as well as having the 'RESETGOP' block connected to the global var for the GOP command.
-Failure to do so will result in the global GOP variable not resetting to no command during an interlock event.
-This means that if an interlock were to initiate a shutdown of a motor for example, as soon as the interlock condition cleared it would be reissued a start command.
-An external block must be used because a UDF cannot modify the value of an input parameter... maybe there is a better way to do this, I am unsure.
+When using thsi block you must have the same variable connected to both the Input Var 'GOP' and the output Var 'GOP_LOOP'.
+As the GOP is used for requesting the state of the block, these need to be connected so that the block can shed the state change request on an interlock condition.
+As a ST UDF cannot write to an input parameter, it was required that an identical output var be created.
+
+The block will also check that the input and output vars are connected by writing to the variable, if it doesn't see the change the block will not initialise,
+it will throw an error, and all logic processing will not function.
